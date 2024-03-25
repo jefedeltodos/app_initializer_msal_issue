@@ -1,0 +1,16 @@
+{
+    "data": {
+        "msalConfig": {
+            "auth": {
+                "clientId": "ENV: clientId not set!",
+                "authority": "ENV: authority not set!"
+            }
+        },
+        "apiConfig": {
+            "scopes": [
+                "ENV: scopes not set!"
+            ],
+            "uri": "ENV: apiRootUri not set!"
+        }
+    }
+}
