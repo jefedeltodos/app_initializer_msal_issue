@@ -18,10 +18,10 @@ This is a project that demonstrates that the `MSAL_GUARD_CONFIG` factory is call
 
 ### Actual Results
 1. The `APP_INITIALIZER` is invoked, but the `Promise` has not resolved.
-2. The `MSAL_GUARD_CONFIG` factory is invoked, but it is dependent on the `APP_INITIALIZER` promise resolving.
+2. The `MSAL_GUARD_CONFIG` factory is invoked.
 3. An Error is thrown because the startup config values are unavailable because the `APP_INITIALIZER` promise hasn't yet resolved.
 4. The `APP_INITIAIZER` promise is resolved, and the config values are ready.
-5. The application does not load in the browser.
+5. The application does not load in the browser due to the previous error.
 
 ![Console Log Outputs](log.png)
 
