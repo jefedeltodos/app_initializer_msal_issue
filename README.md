@@ -1,6 +1,6 @@
 # MsalTest
 
-This is a project that demonstrates that the `MSAL_GUARD_CONFIG` factory is called before the `APP_INITIALIZER` code is completed.
+This is a project that demonstrates that the `MSAL_GUARD_CONFIG` factory is called before the `APP_INITIALIZER` promise is resolved.
 
 [From Angular's documentation](https://angular.io/api/core/APP_INITIALIZER)
 > The provided functions are injected at application startup and executed during app initialization. If any of these functions returns a Promise or an Observable, initialization does not complete until the Promise is resolved or the Observable is completed.
@@ -27,4 +27,4 @@ This is a project that demonstrates that the `MSAL_GUARD_CONFIG` factory is call
 
 ## Notes
 1. This only appears to be an issue when the default route is protected with `canActivate: [MsalGuard]`.
-2. If the default route is not protected, the application loads as normal.
+2. If the default route is not protected, the application loads as expected.
